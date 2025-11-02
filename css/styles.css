@@ -296,6 +296,11 @@ a {
   justify-content: center;
   align-items: center;
   fill: #fff;
+  transition-property: background-color;
+}
+
+.social-links:hover {
+  background-color: #404bbf;
 }
 
 /* #endregion Team Section */
@@ -405,6 +410,10 @@ a {
   display: flex;
   justify-content: center;
   column-gap: 16px;
+}
+
+.footer-media:hover {
+  background-color: #31d0aa;
 }
 
 /* #endregion Footer Section */
