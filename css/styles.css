@@ -93,6 +93,12 @@ a {
   display: block;
   padding: 24px 0;
   position: relative;
+  transition-property: color;
+}
+
+.mail-tel,
+.mail-tel {
+  transition-property: color;
 }
 
 .link:hover,
@@ -102,13 +108,13 @@ a {
   color: #404bbf;
 }
 
-.active-link::after {
+.active-link:hover::after {
   position: absolute;
   content: "";
   border-radius: 2px;
   width: 48px;
   height: 4px;
-  background: #404bbf;
+  background-color: #404bbf;
   left: 0;
   bottom: -1px;
 }
@@ -152,7 +158,7 @@ a {
   font-weight: 500;
   color: #ffffff;
   letter-spacing: 0.04em;
-  background: #4d5ae5;
+  background-color: #4d5ae5;
   cursor: pointer;
   border: 0;
   border-radius: 4px;
@@ -162,11 +168,12 @@ a {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   margin-right: auto;
   margin-left: auto;
+  transition-property: background-color;
 }
 
 .btn:hover,
 .btn:focus {
-  background: #404bbf;
+  background-color: #404bbf;
 }
 /* #endregion Hero Section */
 
@@ -206,21 +213,19 @@ a {
   width: calc((100% - 3 * 24px) / 4);
 }
 
-.futures-card {
+.features-card {
   border: 1px solid #8e8f99;
   border-radius: 4px;
-  background: #f4f4fd;
+  background-color: #f4f4fd;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-}
-
-.futures-card {
   margin-bottom: 8px;
 }
 
 .features-icon {
+  fill: #2e2f42;
   margin: 24px 0;
 }
 
@@ -228,7 +233,7 @@ a {
 
 /* #region Team Section */
 .team-section {
-  background: #f4f4fd;
+  background-color: #f4f4fd;
   padding: 120px 0;
 }
 
@@ -253,7 +258,7 @@ a {
   border-radius: 0 0 4px 4px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-  background: #fff;
+  background-color: #fff;
   width: calc((100% - 3 * 24px) / 4);
 }
 
@@ -290,6 +295,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  fill: #fff;
 }
 
 /* #endregion Team Section */
@@ -318,7 +324,7 @@ a {
 }
 
 .portfolio-box {
-  background: #fff;
+  background-color: #fff;
   width: calc((100% - 48px) / 3);
 }
 
@@ -337,12 +343,34 @@ a {
   margin-bottom: 8px;
 }
 
+.text-on-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-text {
+  padding: 40px 32px 164px;
+  background-color: #4d5ae5;
+  color: #f4f4fd;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform;
+}
+
+.text-on-card:hover .overlay-text {
+  transform: translateY(0);
+}
+
 /* #endregion Portfolio Section */
 
 /* #region Footer Section */
 .footer-section {
   padding: 100px 0;
-  background: #2e2f42;
+  background-color: #2e2f42;
 }
 
 .footer-container {
